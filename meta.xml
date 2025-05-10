@@ -1,0 +1,3 @@
+<metea>
+    <script src="server.lua" type="server" />
+</meta>
