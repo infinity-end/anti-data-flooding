@@ -30,8 +30,8 @@ local CONFIG = {
         --- Regular expression pattern for valid data keys in setElementData.
         -- Only keys matching this pattern are allowed (e.g., alphanumeric, underscore, dot, colon).
         -- @type string
-        -- @default ^[a-zA-Z0-9_.:]+$
-        KEY_PATTERN = "^[a-zA-Z0-9_.:]+$",
+        -- @default [a-zA-Z0-9_.:]
+        KEY_PATTERN = "[a-zA-Z0-9_.:]",
 
         --- Configuration for different element types (vehicle, player, ped, object).
         -- Each type has its own settings for data change limits and penalties.
