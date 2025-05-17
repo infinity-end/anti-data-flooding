@@ -313,14 +313,6 @@ addEventHandler("onElementDataChange", root, function(key, oldValue, newValue)
         return
     end
 
-    if type(newValue) == "table" or type(newValue) == "function" then
-        local reason = ("Invalid data type: %s"):format(type(newValue))
-        outputServerLog(("%s attempted invalid data type on %s: %s"):format(playerName, elementType, type(newValue)))
-        kickPlayer(client, reason)
-        outputServerLog(("Kicked %s for %s on %s"):format(playerName, reason, elementType))
-        return
-    end
-
     if not isAllowedElement(source) then return end
     local elementConfig = getElementConfig(source)
     if not elementConfig then return end
